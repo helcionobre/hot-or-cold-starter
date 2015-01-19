@@ -4,21 +4,18 @@ $(document).ready(function(){
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
     	$(".overlay").fadeIn(1000);
-
   	});
-
-  	/*-- Initialize Global Variables --*/
-
-  	var clicks = 0;
-  	var random_number = 0;
 
   	/*--- Hide information modal box ---*/
   	$("a.close").click(function(){
   		$(".overlay").fadeOut(1000);
   	});
 
-  	 /*-- Start or Restart Game --*/
+  	/*-- Initialize Global Variables --*/
+  	var clicks = 0;
+  	var random_number = 0;
 
+  	 /*-- Start or Restart Game --*/
   	function start_game() 
   	{
  		clicks = 0;
@@ -32,16 +29,13 @@ $(document).ready(function(){
 
 
 	//*-- Counter --*//
-
   	function counter() 
   	{
 		clicks += 1;
 		document.getElementById("count").innerHTML = clicks;
 	};
 
-
 	/*-- Compare two numbers --*/
-
 	function compare_number(num1, num2) 
 	{
 		if (num1 === num2) {
@@ -55,9 +49,7 @@ $(document).ready(function(){
 		}
  	};
 
-
   	/*-- Capture number at click ---*/
-
   	$("form").on("click", "#guessButton", function()
   	{
   		event.preventDefault();
@@ -86,7 +78,6 @@ $(document).ready(function(){
 	});
 
   	/*-- Restart game if click on +New Game --*/
-
 	$("nav").on("click", ".new", function()
   	{
   		start_game();
